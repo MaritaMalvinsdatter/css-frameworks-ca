@@ -14,5 +14,8 @@
   "devDependencies": {
     "live-server": "^1.2.2",
     "sass": "^1.54.6"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
   }
 }
