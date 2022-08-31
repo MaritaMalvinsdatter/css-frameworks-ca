@@ -10758,17 +10758,41 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* NAVBAR */
+.navbar,
+footer {
+  background-color: rgb(65, 158, 65);
+}
+
 .navbar-brand {
   font-size: 50px;
+  color: white;
 }
 
-span,
-.navbar-text {
-  color: blue;
+i {
+  color: black;
 }
 
-.navbar {
-  background-color: rgb(94, 176, 94);
+.navbar-brand .fa-cat {
+  font-size: 28px;
+}
+
+.navbar-brand .fa-dog {
+  font-size: 40px;
+}
+
+.navbar-nav .nav-link.active,
+span {
+  color: rgb(148, 148, 237);
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+/* FOOTER */
+li .nav-link {
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
