@@ -1,3 +1,16 @@
 @import "variables.scss";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar-brand {
+    font-size: 50px;
+}
+
+span,
+.navbar-text {
+    color: blue;
+}
+
+.navbar {
+    background-color: rgb(94, 176, 94);
+}
