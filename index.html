@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
+            <div class="container-fluid px-5">
                 <div class="d-flex flex-column align-items-center">
                     <a class="navbar-brand pb-0 mb-0" href="#"><i class="fa-solid fa-dog"></i><span>P</span>aw<span>S</span>ocial<i class="fa-solid fa-cat fa-flip-horizontal"></i></a>
                     <span class="navbar-text py-0">Where Friends Find Friends</span>
@@ -29,7 +29,7 @@
                     <a class="nav-link font-weight-bold" href="#">Profile</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="#">Friends</a>
+                    <a class="nav-link font-weight-bold" href="#">Login</a>
                   </li>
                 </ul>
               </div>
@@ -37,7 +37,63 @@
           </nav>
     </header>
     <main>
-        <div class="mx-auto" style="width: 600px;">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="container mt-4 mb-4 p-3 d-flex justify-content-center"> 
+              <div class="card p-4"> 
+                <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+                  <div class="border rounded border-primary"><img src="img/pexels-erik-mclean-4061391.jpg" height="100" width="100" /></div>
+                  <span class="name mt-3">Stitchy</span> <span class="idd">@stitch_the_frenchie</span> 
+                <div class="d-flex flex-row justify-content-center align-items-center mt-3">
+                  <p><i class="fa-solid fa-paw"></i> 96 PawFriends <i class="fa-solid fa-paw"></i></p>
+                </div> <div class=" d-flex mt-2"> 
+                  <button class="btn1 btn-dark">Edit Profile</button> 
+                </div> 
+                <div class="text mt-3 text-center"> 
+                  <span>Stitch loves long walks followed by a nap. Will literally eat anything he is given. Loves both his dog and cat friends</span> 
+                </div> 
+                <div class="text mt-3"> 
+                  <span>Location: LA, Califorina</span> 
+                </div> 
+                <div class="gap-3 mt-3 icons d-flex flex-row justify-content-center align-items-center">  
+                  <span class="fs-2"><i class="fa fa-instagram"></i></span>
+                </div> <div class=" px-2 rounded mt-4 date "> 
+                  <span class="join">Joined November 2020</span> 
+                </div> 
+              </div> 
+            </div>
+        </div>
+          </div>
+          <div class="col-lg-4 col-xl-5">
+            <div class="my-5">
+              <h4>Add New Post</h4>
+              <div>
+                    <form>
+                        <div class="form-group row">
+                          <label for="text" class="col-form-label">Title</label> 
+                              <div>
+                                <input id="text" name="text" placeholder="Enter Title here" class="form-control here" required="required" type="text">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="textarea" class="col-form-label">What's on your mind:</label> 
+                              <div>
+                                <textarea id="textarea" name="textarea" cols="20" rows="2" class="form-control"></textarea>
+                              </div>
+                          </div> 
+                          <div class="card-footer bg-light my-3">
+                            <button type="button" class="btn btn-outline-secondary btn-sm">Upload Image</button>
+                            <button type="button" class="btn btn-primary btn-sm">Publish</button>
+                          </div>
+                    </form>
+                    <hr>
+              </div>  
+            </div>
+            <div class="heading text-center my-3">
+              <h1 class="fs-2">What Are Your Friends Up To:</h1>
+            </div>
+            <div>
               <div class="news-feed">
                 <div class="card border border-primary mb-3";">
                   <img class="card-img-top" src="img/pexels-svetozar-milashevich-1490908.jpg" alt="Golden Retriver">
@@ -48,7 +104,7 @@
                     </div>
                     <p class="card-text">Today I went to the park where I met my new friend, Sam. We had a wonderful time playing fetch 
                       and I look forward to another playdate with him. His human was quite nice as well and lots of tasty treats!</p>
-                    <p class="fst-italic">Posted: 09/09/2022</p>
+                    <p class="fst-italic">Posted: 09/09/2022 - Austin, Texas</p>
                     <button type="button" class="btn btn-success">Comment</button>
                   </div>
                 </div>
@@ -61,19 +117,19 @@
                     </div>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis metus non purus fermentum, 
                       sit amet suscipit lectus lobortis. Sed vitae eros in nulla aliquet ornare.</p>
-                    <p class="fst-italic">Posted: 09/08/2022</p>
+                    <p class="fst-italic">Posted: 09/08/2022 - Seattle, Washington</p>
                   </div>
                 </div>
                 <div class="card border border-success mb-3"">
                   <img class="card-img-top" src="img/pexels-pixabay-164186.jpg" alt="Golden Retriver">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
-                      <h4 class="card-title">Ain't nothing like chillin on the beach</h4>
+                      <h4 class="card-title">Looking for a new friend who likes the beach</h4>
                       <i class="fa-solid fa-heart"></i>
                     </div>
                     <p class="card-text">Sed et ullamcorper lacus. Etiam pretium scelerisque neque nec rutrum. Quisque ultricies turpis vel 
                       sapien eleifend, quis porttitor mauris ultrices.</p>
-                    <p class="fst-italic">Posted: 09/07/2022</p>
+                    <p class="fst-italic">Posted: 09/07/2022 - St. Augustin, Florida</p>
                     <button type="button" class="btn btn-success">Comment</button>
                   </div>
                 </div>
@@ -86,11 +142,46 @@
                     </div>
                     <p class="card-text">Nullam quis diam ullamcorper, commodo felis sed, efficitur justo. Ut sed enim imperdiet, lobortis leo eu, 
                       posuere nisl. Nam dignissim rutrum pharetra. Suspendisse porta dui a nisl rutrum ultrices. </p>
-                    <p class="fst-italic">Posted: 09/06/2022</p>
+                    <p class="fst-italic">Posted: 09/06/2022 - Memphis, Tennessee</p>
                     <button type="button" class="btn btn-success">Comment</button>
                   </div>
                 </div>
             </div>
+          </div>
+          </div>
+          <div class="col">
+            <div class="container mt-5">
+              <div class="row d-flex justify-content-center">
+                  <div>
+                      <h4>Find a New Friend</h4>
+                          <div>      
+                            <input type="text" class="form-control" placeholder="Enter city or state">                                  
+                          </div>
+                          <div class="card card-body">
+                            <div class="row">
+                              <p>Filter options:</p>
+                                <div class="col-md-4">
+                                  <input type="text" class="form-control" placeholder="Breed">
+                                </div>
+                                <div class="col-md-4">
+                                  <input type="text" class="form-control" placeholder="Age">
+                                </div>
+                                <div class="col-md-4">
+                                  <input type="text" class="form-control" placeholder="Sex">
+                                </div>
+                            </div>  
+                            <div class="my-3">      
+                                  <button class="btn btn-primary btn-block">Search</button>                                  
+                            </div>                             
+                          </div>
+                    </div>       
+                </div>          
+              </div>       
+            </div>      
+          </div>    
+        </div>    
+      </div>
+    </div>
     </main>
     <footer>
         <div class="py-3 my-4">
