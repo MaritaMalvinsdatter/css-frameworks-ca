@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* NAVBAR */
 /*!
  * Bootstrap  v5.2.0 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -10758,41 +10759,36 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* NAVBAR */
 .navbar,
 footer {
-  background-color: rgb(65, 158, 65);
+  background-color: #fd7e14;
 }
-
-.navbar-brand {
+.navbar .navbar-brand,
+footer .navbar-brand {
   font-size: 50px;
   color: white;
 }
-
-i {
+.navbar i,
+footer i {
   color: black;
 }
-
-.navbar-brand .fa-cat {
+.navbar .navbar-brand .fa-cat,
+footer .navbar-brand .fa-cat {
   font-size: 28px;
 }
-
-.navbar-brand .fa-dog {
+.navbar .navbar-brand .fa-dog,
+footer .navbar-brand .fa-dog {
   font-size: 40px;
 }
-
-.navbar-nav .nav-link.active,
-span {
-  color: rgb(148, 148, 237);
-}
-
-.nav-link {
-  font-weight: bold;
-}
-
-/* FOOTER */
-li .nav-link {
+.navbar .navbar-nav,
+.navbar span,
+footer .navbar-nav,
+footer span {
   color: black;
+}
+.navbar .nav-link.active,
+footer .nav-link.active {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */
