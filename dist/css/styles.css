@@ -10816,4 +10816,9 @@ span {
   grid-column: 4;
 }
 
+/* Login */
+.login-bg-img {
+  background-image: url("img/dog_cat.jpg");
+}
+
 /*# sourceMappingURL=styles.css.map */
