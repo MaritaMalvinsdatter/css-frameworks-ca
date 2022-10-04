@@ -7,6 +7,8 @@
     <meta name="description" content="Login Page">
     <script src="https://kit.fontawesome.com/368a06d7e0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/dist/css/styles.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
     <title>Paw Social | Home</title>
 </head>
 <body>
@@ -62,18 +64,18 @@
                           <label class="form-label" for="password">Password</label>
                         </div>
                         <div class="text-center pt-1 mb-5 pb-1 d-flex flex-column">
-                          <button class="btn btn-primary btn-sm fa-lg gradient-custom-2 mb-3" type="button">Log
-                            in</button>
+                          <button class="btn btn-primary btn-sm fa-lg gradient-custom-2 mb-3" type="submit">Log
+                            In</button>
                           <a class="text-muted" href="#!">Forgot password?</a>
                         </div>
                         <div class="d-flex align-items-center justify-content-center pb-4">
                           <p class="mb-0 me-2">Don't have an account?</p>
-                          <button type="button" class="btn btn-outline-danger">Create new</button>
+                          <a href="/profile/register.html">Create New Account</a>
                         </div>
                       </form>
                     </div>
                   </div>
-                  <div class="col-lg-6 d-flex align-items-center img-fluid" style="background-image: url('img/paws-bg.jpg')">
+                  <div class="col-lg-6 d-flex align-items-center img-fluid" style="background-image: url('/img/paws-bg.jpg')">
                   </div>
                   </div>
                 </div>
@@ -95,5 +97,4 @@
             <p class="text-center">© 2022 PetSocial</p>
         </div>
       </footer>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
