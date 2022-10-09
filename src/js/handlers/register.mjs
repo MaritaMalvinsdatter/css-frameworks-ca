@@ -23,7 +23,6 @@ export function setRegisterFormListener() {
 
             // Send to API
             register(user)
-            // console.log(user);
         })
     }
 }

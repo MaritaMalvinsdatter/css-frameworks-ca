@@ -1,5 +1,5 @@
 import { API_SOCIAL_URL } from "/src/js/api/constants.mjs";
-import * as storage from "/src/js/api/auth/storage/index.mjs";
+import * as storage from "/src/js/storage/storage.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -13,8 +13,8 @@ export async function login(user) {
             "Content-Type": "application/json"
         },
         method,
-        body
-    })
+        body,
+    });
 
     const { accessToken, ...profile } = await respons.json()
 
