@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login Page">
+    <script src="https://kit.fontawesome.com/368a06d7e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/dist/css/styles.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/src/js/index.mjs" defer type="module"></script>
+    <title>Paw Social | Home</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-5">
+                <div class="d-flex flex-column align-items-center">
+                    <a class="navbar-brand pb-0 mb-0" href="/index.html"><i class="fa-solid fa-dog"></i><span>P</span>aw<span>S</span>ocial<i class="fa-solid fa-cat fa-flip-horizontal"></i></a>
+                    <span class="navbar-text py-0">Where Friends Find Friends</span>
+                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold" href="/index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link font-weight-bold" href="/feed/my_feed.html">My Feed</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active font-weight-bold" aria-current="page" href="login.html">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main class="bg-img">
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5" style="max-height: 80%;">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+              <div class="card rounded-3 text-black">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="card-body p-md-5 mx-md-4">
+                      <div class="text-center">
+                        <img src="/img/silhouette-1314467_640.png"
+                          style="width: 185px;" alt="logo">
+                        <h4 class="mt-1 mb-5 pb-1">PawSocial</h4>
+                      </div>
+                      <form id="loginForm">
+                        <p>Please login to your account</p>
+                        <div class="form-outline mb-4">
+                          <div class="form-outline mb-4">
+                            <label class="form-label" for="email">Email:</label>
+                            <input type="email" name="email" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="only an email registered within the Noroff domain can register" class="form-control"
+                              placeholder="email address" required/>             
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="password">Password:</label>
+                            <input type="password" name="password" minlength="8" class="form-control" placeholder="minimum 8 characters" required/>
+                        </div>      
+                        <div class="text-center pt-1 mb-5 pb-1 d-flex flex-column">
+                          <button class="btn btn-primary btn-sm fa-lg gradient-custom-2 mb-3" type="submit">Log
+                            In</button>
+                          <a class="text-muted" href="#!">Forgot password?</a>
+                        </div>
+                      </form>
+                      <form>
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                          <p class="mb-0 me-2">Don't have an account?</p>
+                          <a href="/profile/register.html">Create New Account</a>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center img-fluid" style="background-image: url('/img/paws-bg.jpg')">
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+
+    </main>
+    <footer>
+        <div class="py-3 my-4">
+            <ul class="nav justify-content-center pb-3 mb-3">
+                <li class="nav-item"><a href="/index.html" class="nav-link px-2 font-weight-bold text-dark">Home</a></li>
+                <li class="nav-item"><a href="/feed/my_feed.html" class="nav-link px-2 font-weight-bold text-dark">Profile</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 font-weight-bold text-dark">Friends</a></li>
+              </ul>
+            <p class="text-center">© 2022 PetSocial</p>
+        </div>
+      </footer>
+</body>
