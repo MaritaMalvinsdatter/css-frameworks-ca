@@ -1,3 +1,69 @@
+/* NAVBAR */
+
 @import "variables.scss";
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar,
+footer {
+    background-color: $orange;
+}
+
+.navbar-brand {
+    font-size: 50px;
+    color: white;
+}
+
+i {
+    color: black;
+}
+
+.navbar-brand .fa-cat {
+    font-size: 28px;
+}
+
+.navbar-brand .fa-dog {
+    font-size: 40px;
+}
+
+.navbar-nav,
+span {
+    // color: rgb(34 34 132);
+    color: black;
+}
+
+.nav-link.active {
+    text-decoration: underline;
+}
+
+
+/* Calendar */
+
+.days {
+    grid-template-columns: repeat(7, 1fr);
+
+    span {
+        width: 50px;
+        text-align: center;
+    }
+}
+
+.dates {
+    grid-template-columns: repeat(7, 1fr);
+
+    button {
+        border: 0;
+        background: transparent;
+        width: 50px;
+        border-radius: 50px;
+        margin: 2px;
+
+        &.today {
+            box-shadow: inset 0px 0px 0px 2px #0a3d62;
+        }
+
+        &:first-child {
+            grid-column: 4;
+        }
+    }
+}
