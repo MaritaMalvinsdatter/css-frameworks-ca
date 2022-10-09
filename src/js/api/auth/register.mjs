@@ -16,5 +16,5 @@ export async function register(user) {
     })
 
     const result = await respons.json()
-    console.log(result);
+    return result
 }
