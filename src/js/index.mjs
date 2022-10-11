@@ -1,7 +1,7 @@
 // register and login
 import { setRegisterFormListener } from "./handlers/register.mjs";
 import { setLoginFormListener } from "./handlers/login.mjs";
-import * as post from "/src/js/api/posts/index.mjs";
+// import * as post from "/src/js/api/posts/index.mjs";
 
 // register and login
 const path = location.pathname
@@ -13,11 +13,11 @@ if (path === '/profile/login.html') {
 }
 
 // posts handlers
-post.createPost()
-post.getPosts()
-post.getPost(4367).then(console.log)
-post.removePost()
-post.updatePost()
+// post.createPost()
+// post.getPosts()
+// post.getPost(4367).then(console.log)
+// post.removePost()
+// post.updatePost()
 
 
 //posts
