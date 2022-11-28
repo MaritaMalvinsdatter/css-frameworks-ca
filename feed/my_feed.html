@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/dist/css/styles.css">
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="/src/js/index.mjs" defer type="module"></script>
-    <title>Paw Social | Profile</title>
+    <title>Paw Social | My Feed</title>
 </head>
 <body>
     <header>
@@ -91,7 +91,7 @@
                     <div class="content">
                         <div class="container">
                             <div class="row justify-content-evenly mb-4">
-                                <div class="col-lg-4 col-xs-1">
+                                <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
                                             <div class="mx-auto"><img src="/img/pexels-leah-kelley-12646549.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="col-lg-4 col-xs-1">
+                                <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
                                             <div class="mx-auto"><img src="/img/pexels-nicol-malaver-9394105.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
@@ -201,24 +201,32 @@
                     <div class="my-5">
                         <h4>What's up:</h4>
                         <div>
-                              <form>
-                                  <div class="form-group row">
-                                    <label for="text" class="col-form-label">Title</label> 
+                            <!-- POST SECTION -->
+                              <form id="create-post">
+                                    <div class="form-group row mx-3">
+                                    <label for="title" class="col-form-label">Title</label> 
                                         <div>
-                                          <input id="text" name="text" placeholder="Enter Title here" class="form-control here" required="required" type="text">
+                                          <input id="text" name="title" placeholder="Enter Title here" class="form-control" required="required" type="text">
                                         </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label for="textarea" class="col-form-label">Text:</label> 
+                                    </div>
+                                    <div class="form-group row mx-3">
+                                        <label for="body" class="col-form-label">Text:</label> 
                                         <div>
-                                          <textarea id="textarea" name="textarea" placeholder="Tell about your day" cols="20" rows="2" class="form-control"></textarea>
+                                          <textarea id="textarea" name="body" placeholder="Tell about your day" cols="20" rows="2" class="form-control" required="required" type="text"></textarea>
                                         </div>
-                                    </div> 
-                                    <div class="card-footer my-3">
-                                      <button type="button" class="btn btn-outline-secondary btn-sm">Upload Image</button>
+                                    </div>
+                                    <div class="form-group row mx-3">
+                                        <label class="col-form-label" for="media">Media:</label>
+                                        <div>
+                                          <input type="url" name="media" class="form-control" placeholder="insert image url here (optional)"/>  
+                                        </div>        
+                                    </div>
+                                    <div class="card-footer my-3 mx-3">
+                                      <!-- <button type="button" class="btn btn-outline-secondary btn-sm">Upload Image</button> -->
                                       <button type="button" class="btn btn-primary btn-sm">Publish</button>
                                     </div>
                               </form>
+                              <!-- POST SECTION ENDS -->
                               <hr>
                         </div>  
                       </div>
