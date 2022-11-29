@@ -1,15 +1,21 @@
 // register and login
-import { setRegisterFormListener } from "./handlers/register.mjs";
-import { setLoginFormListener } from "./handlers/login.mjs";
+// import { setRegisterFormListener } from "./handlers/register.mjs";
+// import { setLoginFormListener } from "./handlers/login.mjs";
 // import * as post from "/src/js/api/posts/index.mjs";
+
+import * as listeners from "./handlers/handlerIndex.mjs"
 
 // register and login
 const path = location.pathname
 
 if (path === '/profile/login.html') {
-    setLoginFormListener()
+    listeners.setLoginFormListener()
 } else if (path === '/profile/register.html') {
-    setRegisterFormListener()
+    listeners.setRegisterFormListener()
+} else if (path === '/feed/my_feed.html') {
+    listeners.setCreatePostListener()
+} else if (path === '/feed/edit_post.html') {
+    listeners.setEditPostListener()
 }
 
 // posts handlers
