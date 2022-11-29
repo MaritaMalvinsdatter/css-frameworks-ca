@@ -1,4 +1,4 @@
-import { register } from "/js/api/auth/register.mjs";
+import { register } from "/js/auth/register.mjs";
 
 export function setRegisterFormListener() {
     const form = document.querySelector("#registerForm");
@@ -16,7 +16,7 @@ export function setRegisterFormListener() {
                 delete user.avatar
             }
 
-            console.log(user);
+            // console.log(user);
 
             // Send to API
             register(user)
