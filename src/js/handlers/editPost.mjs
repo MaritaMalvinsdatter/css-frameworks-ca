@@ -1,7 +1,10 @@
 import { editPost } from "/src/js/api/posts/postIndex.mjs"
 
-export function seteditPostListener() {
+export function setEditPostListener() {
     const form = document.querySelector("#edit-post");
+
+    const url = URL(location.href);
+    const id = url.searchParams.get("id");
 
     if (form) {
 
@@ -10,6 +13,7 @@ export function seteditPostListener() {
             const form = event.target;
             const formData = new FormData(form);
             const post = Object.fromEntries(formData.entries())
+            post.id = id;
 
             // Send to API
             editPost(post)

@@ -18,7 +18,7 @@ export async function register(user) {
 
     const result = await response.json();
     alert("Registration Complete - Welcome!")
-    window.location.assign("../index.html")
+    window.location.assign("../profile.html")
     document.getElementById("myForm").reset();
     return result;
 
