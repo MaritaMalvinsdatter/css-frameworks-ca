@@ -21,6 +21,6 @@ export async function register(user) {
     // alert("Registration Complete - Welcome!")
     // window.location.assign("../profile.html")
     // document.getElementById("myForm").reset();
-    // return result;
+    return result;
 
 }
