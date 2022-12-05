@@ -4,7 +4,10 @@ import * as storage from "/js/api/storage.mjs";
 const action = "/auth/login";
 const method = "post";
 
+const userAlert = document.querySelector("#error-alert");
+
 export async function login(user) {
+    userAlert.innerHTML = "";
     const loginURL = API_SOCIAL_URL + action;
     const body = JSON.stringify(user);
 
@@ -18,7 +21,12 @@ export async function login(user) {
 
     const { accessToken, ...profile } = await response.json()
 
-    storage.save("token", accessToken);
-    storage.save("profile", profile);
-    window.location.assign("/profile.html")
+     if (accessToken) {
+        storage.save("token", accessToken);
+        storage.save("profile", profile);
+        window.location.assign("/profile.html")
+    } else {
+        userAlert.classList.add("alert-warning");
+        userAlert.innerHTML += `No user with this email registered. Please register to make an account!`;
+    }
 }
