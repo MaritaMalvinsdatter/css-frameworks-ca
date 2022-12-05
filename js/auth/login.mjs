@@ -19,12 +19,12 @@ export async function login(user) {
         body,
     });
 
-    const { accessToken, ...profile } = await response.json()
+    const { accessToken, ...profile } = await response.json();
 
      if (accessToken) {
         storage.save("token", accessToken);
         storage.save("profile", profile);
-        window.location.assign("/profile.html")
+        window.location.assign("/profile.html");
     } else {
         userAlert.classList.add("alert-warning");
         userAlert.innerHTML += `No user with this email registered. Please register to make an account!`;
