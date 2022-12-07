@@ -1,13 +1,12 @@
-import { editPost } from "/js/api/posts/postIndex.mjs"
+import { editPost } from "/js/posts/postIndex.mjs"
 
 export function setEditPostListener() {
     const form = document.querySelector("#edit-post");
 
-    const url = URL(location.href);
+    const url = new URL(location.href);
     const id = url.searchParams.get("id");
 
     if (form) {
-
         form.addEventListener("submit", (event) => {
             event.preventDefault()
             const form = event.target;

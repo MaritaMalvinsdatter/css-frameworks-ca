@@ -12,10 +12,7 @@ export async function createPost(postData) {
         body: JSON.stringify(postData),
     })
 
-    var idTest = postData.id;
-
     console.log(postData);
-    console.log(idTest);
 
     return await response.json();
 }

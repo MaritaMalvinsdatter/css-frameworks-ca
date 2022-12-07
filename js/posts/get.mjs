@@ -23,7 +23,7 @@ export async function getPosts() {
     const response = await tokenFetch(updatePostURL)
     const post = await response.json();
 
-    // console.log(post);
+    console.log(post);
 
     return post;
 }

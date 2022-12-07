@@ -1,4 +1,4 @@
-import { createPost } from "/js/api/posts/postIndex.mjs"
+import { createPost } from "/js/posts/postIndex.mjs"
 
 export function setCreatePostListener() {
     const form = document.querySelector("#create-post");
@@ -12,8 +12,9 @@ export function setCreatePostListener() {
             const post = Object.fromEntries(formData.entries())
 
             // Send to API
-            createPost(post)
+            createPost(post);
             console.log(post);
-        })
+            form.reset();
+        });
     }
 }

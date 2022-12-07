@@ -4,7 +4,7 @@ import { tokenFetch } from "/js/api/tokenFetch.mjs"
 const action = "/posts"
 
 // edits exiting post
-export async function updatePost(postData) {
+export async function editPost(postData) {
     if (!postData.id) {
         console.error("postID needed to edit existing post");
     }

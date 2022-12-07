@@ -1,33 +1,35 @@
 
-import { setRegisterFormListener } from "./eventHandlers/registerUser.mjs";
-import { setLoginFormListener } from "./eventHandlers/loginUser.mjs";
-
-import * as postMethods from "./posts/postIndex.mjs";
+import * as handlers from "./eventHandlers/handlerIndex.mjs";
 import * as templates from "./templates/templateIndex.mjs";
+import * as postMethods from "./posts/postIndex.mjs";
 
 const path = location.pathname
 
 if (path === '/index.html') {
-    setLoginFormListener()
+    handlers.setLoginFormListener()
 } else if (path === '/register.html') {
-    setRegisterFormListener()
-} 
-
-async function testTemplateA() {
-    const posts = await postMethods.getPosts()
-    const post = posts[85];
-    const container = document.querySelector("#post");
-    templates.renderPost(post, container)
+    handlers.setRegisterFormListener()
+} else if (path === '/profile.html') {
+    handlers.setCreatePostListener()
+} else if (path === '/edit_post.html') {
+    handlers.setEditPostListener()
 }
 
-async function testTemplateB() {
+// async function testTemplateA() {
+//     const posts = await postMethods.getPosts()
+//     const post = posts[85];
+//     const container = document.querySelector("#post");
+//     templates.renderPost(post, container)
+// }
+
+async function testMutiplePosts() {
     const posts = await postMethods.getPosts()
     const container = document.querySelector("#news-feed");
     templates.renderPosts(posts, container)
 }
 
-testTemplateA()
-testTemplateB()
+// testTemplateA()
+testMutiplePosts()
 
 // posts handlers
 // post.createPost()
