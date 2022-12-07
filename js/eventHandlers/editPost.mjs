@@ -1,4 +1,4 @@
-import { editPost } from "/src/js/api/posts/postIndex.mjs"
+import { editPost } from "/js/api/posts/postIndex.mjs"
 
 export function setEditPostListener() {
     const form = document.querySelector("#edit-post");
