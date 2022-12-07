@@ -27,3 +27,22 @@ export async function getPosts() {
 
     return post;
 }
+
+// export async function getPosts() {
+
+//     try {
+//         const updatePostURL = `${API_SOCIAL_URL}${action}`;
+//         const response = await tokenFetch(updatePostURL)
+//         const posts = await response.json();
+
+//         const postFeed = document.querySelector("#news-feed")
+
+//         postFeed.innerHTML = "";
+//         // console.log(posts);
+
+//         return posts;
+
+//     } catch (error) {
+//         postFeed.innerHTML += `An error has occured, please return to main page`
+//     }
+// }
