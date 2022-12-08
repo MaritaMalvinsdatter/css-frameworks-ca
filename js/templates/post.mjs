@@ -4,10 +4,26 @@
 
 export function postTemplateB(postData) {
     const post = document.createElement("div");
-    post.classList.add("post");
-    post.innerText = postData.title;
-    // post.classList.add("postBody");
-    // post.innerText = postData.body;
+    post.classList.add("mainpost", "container-fluid");
+    post.innerHTML = `<a href="post.html?id=${postData.id}"><h2>${postData.title}</h2></a>`;
+    const body = document.createElement("p");
+    body.innerHTML = `<u>Body:</u> ${postData.body}`;
+    post.append(body);
+    
+    if (postData.media) {
+        const img = document.createElement("img");
+        img.classList.add("img-fluid");
+        img.src = postData.media;
+        img.alt = `Image from ${postData.title}`;
+        post.append(img)
+      }
+    
+    if (postData.tags) {
+        const tags = document.createElement("label");
+        tags.innerText = postData.tags;
+        post.append(tags)
+    } 
+
     return post;
 }
 
@@ -19,8 +35,4 @@ export function renderPost(postData, parent) {
 export function renderPosts(postDataList, parent) {
     const postHTMLElements = postDataList.map(postTemplateB);
     parent.append(...postHTMLElements);
-
-    // postDataList.forEach((post) => {
-    //     postTemplateB(post);
-    // })
 }
