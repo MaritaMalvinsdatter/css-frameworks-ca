@@ -17,9 +17,5 @@ export async function editPost(postData) {
         body: JSON.stringify(postData)
     })
 
-    const post = await response.json();
-
-    console.log(post);
-
-    return post;
+    return await response.json();
 }

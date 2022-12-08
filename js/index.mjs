@@ -15,20 +15,21 @@ if (path === '/index.html') {
     handlers.setEditPostListener()
 }
 
-// async function testTemplateA() {
-//     const posts = await postMethods.getPosts()
-//     const post = posts[85];
-//     const container = document.querySelector("#post");
-//     templates.renderPost(post, container)
-// }
+async function testOnePost() {
+    const post = await postMethods.getPost()
+    const container = document.querySelector("#post");
+    templates.renderPost(post, container)
+    console.log(post);
+}
 
 async function testMutiplePosts() {
     const posts = await postMethods.getPosts()
     const container = document.querySelector("#news-feed");
     templates.renderPosts(posts, container)
+    console.log(posts);
 }
 
-// testTemplateA()
+testOnePost()
 testMutiplePosts()
 
 // posts handlers
