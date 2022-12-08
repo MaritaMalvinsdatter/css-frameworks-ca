@@ -2,8 +2,15 @@ import { API_SOCIAL_URL } from "/js/api/constants.mjs";
 import { tokenFetch } from "/js/api/tokenFetch.mjs";
 const action = "/posts";
 
+
 // gets single post, id needed
-export async function getPost(id) {
+export async function getPost() {
+
+    const queryString = document.location.search;
+    const params = new URLSearchParams(queryString);
+    const id = params.get("id");
+    // console.log(id);
+
     if (!id) {
         console.error("postID needed to get post");
     }
@@ -23,26 +30,7 @@ export async function getPosts() {
     const response = await tokenFetch(updatePostURL)
     const post = await response.json();
 
-    console.log(post);
+    // console.log(post);
 
     return post;
 }
-
-// export async function getPosts() {
-
-//     try {
-//         const updatePostURL = `${API_SOCIAL_URL}${action}`;
-//         const response = await tokenFetch(updatePostURL)
-//         const posts = await response.json();
-
-//         const postFeed = document.querySelector("#news-feed")
-
-//         postFeed.innerHTML = "";
-//         // console.log(posts);
-
-//         return posts;
-
-//     } catch (error) {
-//         postFeed.innerHTML += `An error has occured, please return to main page`
-//     }
-// }
