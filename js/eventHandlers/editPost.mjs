@@ -1,4 +1,5 @@
 import { getPost, editPost } from "/js/posts/postIndex.mjs";
+// import { isLoggedIn } from "/js/auth/login.mjs";
 
 export async function setEditPostListener() {
     const form = document.querySelector("#edit-post");
@@ -33,15 +34,15 @@ export async function setEditPostListener() {
 
             post.tags = post.tags.split(",");
 
-            if (editPost(post) && profileName.name === post.author) {
-                window.location.assign(`/post.html?id=${post.id}`);
-            } else {
-                userAlert.classList.add("alert-warning");
-                userAlert.innerHTML += `You can only update your own posts`;
-            }
+            // if (editPost(post) && profileName.name === isLoggedIn()) {
+            //     window.location.assign(`/post.html?id=${post.id}`);
+            // } else {
+            //     userAlert.classList.add("alert-warning");
+            //     userAlert.innerHTML += `You can only update your own posts`;
+            // }
 
             // Send to API
-            
+            editPost(post)
             console.log(post);
         })
     }
