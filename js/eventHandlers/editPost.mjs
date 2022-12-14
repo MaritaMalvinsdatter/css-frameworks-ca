@@ -15,7 +15,7 @@ export async function setEditPostListener() {
 
         const post = await getPost(id);
 
-        const profileName = JSON.parse(window.localStorage.getItem('profile'))
+        // const profileName = JSON.parse(window.localStorage.getItem('profile'))
 
         // shows orignal input
         form.title.value = post.title;
@@ -34,15 +34,10 @@ export async function setEditPostListener() {
 
             post.tags = post.tags.split(",");
 
-            // if (editPost(post) && profileName.name === isLoggedIn()) {
-            //     window.location.assign(`/post.html?id=${post.id}`);
-            // } else {
-            //     userAlert.classList.add("alert-warning");
-            //     userAlert.innerHTML += `You can only update your own posts`;
-            // }
+            if (editPost(post)) {
+                window.location.assign(`/post.html?id=${post.id}`);
+            } 
 
-            // Send to API
-            editPost(post)
             console.log(post);
         })
     }
