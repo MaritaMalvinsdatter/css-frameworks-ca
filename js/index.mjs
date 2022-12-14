@@ -2,6 +2,11 @@
 import * as handlers from "./eventHandlers/handlerIndex.mjs";
 import * as templates from "./templates/templateIndex.mjs";
 import * as postMethods from "./posts/postIndex.mjs";
+import * as constants from "./api/constants.mjs";
+
+// import { createPost } from "./posts/create.mjs";
+
+console.log(constants.API_AUTHOR_URL);
 
 const path = location.pathname
 
@@ -11,9 +16,12 @@ if (path === '/index.html') {
     handlers.setRegisterFormListener()
 } else if (path === '/profile.html') {
     handlers.setCreatePostListener()
+    testMutiplePosts()
 } else if (path === '/edit_post.html') {
     handlers.setEditPostListener()
-}
+} else if (path === '/post.html') {
+    testOnePost()
+} 
 
 async function testOnePost() {
     const post = await postMethods.getPost()
@@ -29,8 +37,8 @@ async function testMutiplePosts() {
     console.log(posts);
 }
 
-testOnePost()
-testMutiplePosts()
+
+
 
 // posts handlers
 // post.createPost()
@@ -41,10 +49,6 @@ testMutiplePosts()
 // post.updatePost()
 
 // posts
-// createPost({
-//     title: "My first example post",
-//     body: "JavaScripts global scope is like a public toilet. You cant avoid going in there, but try to limit your contact with surfaces when you do."
-// })
 
 // updatePost({
 //     id: 552,
