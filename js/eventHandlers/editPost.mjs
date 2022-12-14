@@ -6,8 +6,6 @@ export async function setEditPostListener() {
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
 
-    const userAlert = document.querySelector("#error-alert");
-
     if (form) {
 
         const button = form.querySelector("button");
