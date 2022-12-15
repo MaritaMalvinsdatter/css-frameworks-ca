@@ -1,10 +1,11 @@
 import { getPost, editPost } from "/js/posts/postIndex.mjs";
-// import { isLoggedIn } from "/js/auth/login.mjs";
 
 export async function setEditPostListener() {
     const form = document.querySelector("#edit-post");
     const url = new URL(location.href);
     const id = url.searchParams.get("id");
+
+    const userAlert = document.querySelector("#error-alert");
 
     if (form) {
 
@@ -12,8 +13,6 @@ export async function setEditPostListener() {
         button.disabled = true;
 
         const post = await getPost(id);
-
-        // const profileName = JSON.parse(window.localStorage.getItem('profile'))
 
         // shows orignal input
         form.title.value = post.title;
@@ -31,12 +30,9 @@ export async function setEditPostListener() {
             post.id = id;
 
             post.tags = post.tags.split(",");
-
-            if (editPost(post)) {
-                window.location.assign(`/post.html?id=${post.id}`);
-            } 
-
-            console.log(post);
+            
+            editPost(post)
+            setTimeout(function() { window.location.assign(`/post.html?id=${post.id}`); }, 500); 
         })
     }
 }
