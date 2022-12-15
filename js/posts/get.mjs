@@ -12,7 +12,7 @@ export async function getPost() {
     const queryString = document.location.search;
     const params = new URLSearchParams(queryString);
     const id = params.get("id");
-    // console.log(id);
+    console.log(id);
 
     if (!id) {
         console.error("postID needed to get post");
@@ -21,7 +21,7 @@ export async function getPost() {
     const response = await tokenFetch(getPostURL)
     const post = await response.json();
 
-    // console.log(getPostURL);
+    console.log(getPostURL);
 
     return post;
 }
