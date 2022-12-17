@@ -75,11 +75,16 @@
                             </div>
                             <div id="error-alert" class="alert text-center"></div>
                       </form>
-                      <form id="delete-post">
-                            <div class="card-footer my-3 mx-3">
-                              <button type="submit" id="deleteBtn">Delete Post</button>
-                            </div>
+                      <form>
+                        <input type="hidden" value="${post.id}" name="id"/>
+                        <button id="deleteBtn" >Remove</button>
+                        <!-- <button formaction="/edit-post.html">Edit</button> -->
                       </form>
+                      <!-- <form method="DELETE"> -->
+                        <!-- <input type="hidden" value="${post.id}" name="id"/> -->
+                        <!-- <button id="deleteBtn" data-id="${post.id}">Remove</button> -->
+                        <!-- <button formaction="/edit-post.html">Edit</button> -->
+                      <!-- </form> -->
                       <!-- EDIT POST SECTION ENDS -->
                 </div>      
             </div>

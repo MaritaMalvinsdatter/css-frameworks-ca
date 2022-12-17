@@ -12,7 +12,7 @@ if (path === '/index.html') {
     postMethods.getMutiplePosts()
 } else if (path === '/edit_post.html') {
     handlers.setEditPostListener()
-    handlers.setRemovePostListener()
+    postMethods.setRemovePostListener()
 } else if (path === '/post.html') {
     postMethods.getOnePost()
 } 
