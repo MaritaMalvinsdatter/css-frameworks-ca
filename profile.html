@@ -8,14 +8,16 @@
     <script src="https://kit.fontawesome.com/368a06d7e0.js" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/styles.css">
-    <title>Paw Social | Profile</title>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/index.mjs" defer type="module"></script>
+    <title>Paw Social | My Feed</title>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-5">
                 <div class="d-flex flex-column align-items-center">
-                    <a class="navbar-brand pb-0 mb-0" href="index.html"><i class="fa-solid fa-dog"></i><span>P</span>aw<span>S</span>ocial<i class="fa-solid fa-cat fa-flip-horizontal"></i></a>
+                    <a class="navbar-brand pb-0 mb-0" href="/index.html"><i class="fa-solid fa-dog"></i><span>P</span>aw<span>S</span>ocial<i class="fa-solid fa-cat fa-flip-horizontal"></i></a>
                     <span class="navbar-text py-0">Where Friends Find Friends</span>
                 </div>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,14 +25,14 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <!-- <li class="nav-item">
+                    <a class="nav-link font-weight-bold"" href="/index.html">Home</a>
+                  </li> -->
                   <li class="nav-item">
-                    <a class="nav-link font-weight-bold"" href="index.html">Home</a>
+                    <a class="nav-link active font-weight-bold" aria-current="page" href="profile.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active font-weight-bold" aria-current="page" href="profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="login.html">Login</a>
+                    <a class="nav-link font-weight-bold" href="index.html">Login</a>
                   </li>
                 </ul>
               </div>
@@ -80,7 +82,7 @@
             </div>
         </section>
         <hr>
-        <div class="container mt-5" style="max-width: 1600px;" >
+        <div class="container mt-5 container-fluid">
             <div class="row gx-5">
                 <div class="col mt-5">
                     <div class="heading text-center my-3">
@@ -89,10 +91,10 @@
                     <div class="content">
                         <div class="container">
                             <div class="row justify-content-evenly mb-4">
-                                <div class="col-lg-4 col-xs-1">
+                                <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-leah-kelley-12646549.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-leah-kelley-12646549.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Lucky</h4>
                                                 <p class="text-muted mb-0">@miss_lucky</p>
@@ -105,10 +107,10 @@
                                     </div>
                                 </div>
                                 <!-- end col -->
-                                <div class="col-lg-4 col-xs-1">
+                                <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-nicol-malaver-9394105.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-nicol-malaver-9394105.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Gonzalo</h4>
                                                 <p class="text-muted mb-0">@gonzalo_bull</p>
@@ -126,7 +128,7 @@
                                 <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-julissa-helmuth-3478875.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-julissa-helmuth-3478875.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Joakim</h4>
                                                 <p class="text-muted mb-0">@puppy_joakim</p>
@@ -142,7 +144,7 @@
                                 <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-pixabay-208984.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-pixabay-208984.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Soxs</h4>
                                                 <p class="text-muted mb-0">@grumpy_soxs</p>
@@ -161,7 +163,7 @@
                                 <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-lera-mk-10480395.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-lera-mk-10480395.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Thyra</h4>
                                                 <p class="text-muted mb-0">@thyra</p>
@@ -177,7 +179,7 @@
                                 <div class="col-lg-4 col-sm col-xs">
                                     <div class="text-center card-box">
                                         <div class="member-card pt-2 pb-2">
-                                            <div class="mx-auto"><img src="img/pexels-jack-granger-11966610.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
+                                            <div class="mx-auto"><img src="/img/pexels-jack-granger-11966610.jpg" class="rounded-circle img-thumbnail" style="max-width: 100px;" alt="profile-image"></div>
                                             <div class="">
                                                 <h4 class="fs-6">Malvin</h4>
                                                 <p class="text-muted mb-0">@malvin_dawg</p>
@@ -199,33 +201,75 @@
                     <div class="my-5">
                         <h4>What's up:</h4>
                         <div>
-                              <form>
-                                  <div class="form-group row">
-                                    <label for="text" class="col-form-label">Title</label> 
+                            <!-- ADD POST SECTION -->
+                              <form id="create-post">
+                                    <div class="form-group row mx-3">
+                                    <label for="title" class="col-form-label">Title</label> 
                                         <div>
-                                          <input id="text" name="text" placeholder="Enter Title here" class="form-control here" required="required" type="text">
+                                          <input id="text" name="title" placeholder="Enter Title here" class="form-control" required="required" type="text">
                                         </div>
-                                      </div>
-                                      <div class="form-group row">
-                                        <label for="textarea" class="col-form-label">Text:</label> 
+                                    </div>
+                                    <div class="form-group row mx-3">
+                                        <label for="body" class="col-form-label">Text:</label> 
                                         <div>
-                                          <textarea id="textarea" name="textarea" placeholder="Tell about your day" cols="20" rows="2" class="form-control"></textarea>
+                                          <textarea id="textarea" name="body" placeholder="Tell about your day" cols="20" rows="2" class="form-control" required="required" type="text"></textarea>
                                         </div>
-                                    </div> 
-                                    <div class="card-footer my-3">
-                                      <button type="button" class="btn btn-outline-secondary btn-sm">Upload Image</button>
-                                      <button type="button" class="btn btn-primary btn-sm">Publish</button>
+                                    </div>
+                                    <div class="form-group row mx-3">
+                                        <label class="col-form-label" for="media">Media:</label>
+                                        <div>
+                                          <input type="url" name="media" class="form-control" placeholder="insert image url here (optional)"/>  
+                                        </div>        
+                                    </div>
+                                    <div class="form-group row mx-3">
+                                        <label class="col-form-label" for="media">Tags:</label>
+                                        <div>
+                                          <input type="text" name="tags" class="form-control" placeholder="(optional)"/>  
+                                        </div>        
+                                    </div>
+                                    <div class="card-footer my-3 mx-3">
+                                      <button type="submit" class="btn btn-primary btn-sm">Publish Post</button>
                                     </div>
                               </form>
+                            <!-- ADD POST SECTION ENDS -->
                               <hr>
                         </div>  
                       </div>
                     <div class="heading text-center my-3">
                         <h1 class="fs-2">My Feed:</h1>
                     </div>
-                    <div class="news-feed">
-                        <div class="card border border-danger mb-3";">
-                          <img class="card-img-top" src="img/pexels-erik-mclean-4061390.jpg" alt="">
+                    <!-- SEARCH & FILTER -->
+                    <div class="input-group">
+                        <div class="form-outline">
+                          <input id="search-input" type="search" id="form1" class="form-control" />
+                          <label class="form-label" for="form1">Search</label>
+                        </div>
+                        <button id="search-button" type="button" class="btn btn-primary">
+                          <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="filter-dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          <p>Filter by</p>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <button id="postOldNew" class="dropdown-item" type="button">
+                              <p>Oldest to newest</p>
+                            </button>
+                          </li>
+                          <li>
+                            <button id="postImages" class="dropdown-item" type="button">
+                              <p>Posts with images</p> 
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- SEARCH & FILTER DONE -->
+                    <!-- POST FEED -->
+                    <div id="news-feed">
+                        <!-- <div class="card border border-danger mb-3";">
+                          <img class="card-img-top" src="/img/pexels-erik-mclean-4061390.jpg" alt="">
                           <div class="card-body">
                             <div class="d-flex justify-content-between">
                               <h4 class="card-title">Lorem ipsum dolor</h4>
@@ -238,158 +282,11 @@
                             <p class="fst-italic">Posted: 09/09/2022 - LA, California</p>
                             <button type="button" class="btn btn-success">Comment</button>
                           </div>
-                        </div>
-                        <div class="card border border-primary mb-3";">
-                            <img class="card-img-top" src="img/pexels-erik-mclean-4061390.jpg" alt="">
-                            <div class="card-body">
-                              <div class="d-flex justify-content-between">
-                                <h4 class="card-title">Lorem ipsum dolor</h4>
-                                <i class="fa-regular fa-heart"></i>
-                              </div>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Vestibulum malesuada non nulla non laoreet. Nulla eget felis ex. In tincidunt aliquet tellus, 
-                                ut mollis orci posuere et. Aenean eget dui facilisis, gravida massa nec, congue nunc. 
-                                Fusce elementum quam id ipsum luctus, nec ornare nunc consequat. </p>
-                              <p class="fst-italic">Posted: 09/09/2022 - LA, California</p>
-                              <button type="button" class="btn btn-success">Comment</button>
-                            </div>
-                          </div>
-                          <div class="card border border-success mb-3";">
-                            <img class="card-img-top" src="img/pexels-erik-mclean-4061390.jpg" alt="">
-                            <div class="card-body">
-                              <div class="d-flex justify-content-between">
-                                <h4 class="card-title">Lorem ipsum dolor</h4>
-                                <i class="fa-regular fa-heart"></i>
-                              </div>
-                              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Vestibulum malesuada non nulla non laoreet. Nulla eget felis ex. In tincidunt aliquet tellus, 
-                                ut mollis orci posuere et. Aenean eget dui facilisis, gravida massa nec, congue nunc. 
-                                Fusce elementum quam id ipsum luctus, nec ornare nunc consequat. </p>
-                              <p class="fst-italic">Posted: 09/09/2022 - LA, California</p>
-                              <button type="button" class="btn btn-success">Comment</button>
-                            </div>
-                          </div>
+                        </div> -->
                     </div>
-                    <!-- end feed -->
+                    <!-- END FEED -->
                 </div>
                 <div class="col mt-5">
-                    <div class="heading text-center my-3">
-                        <h2 class="fs-2">Events</h2>
-                    </div>
-                  <div class="calendar-container d-flex justify-content-center">
-                    <div class="calendar d-inline-grid p-5 border border-dark rounded mw-100">
-                        <div class="month d-flex justify-content-between align-items-center fs-4 mb-3">
-                            <a href="#" class="nav ml-2 justify-content-center align-items-center text-decoration-none"><i class="fas fa-angle-left"></i></a>
-                            <div>September<span class="year">2022</span></div>
-                            <a href="#" class="nav justify-content-center align-items-center text-decoration-none"><i class="fas fa-angle-right"></i></a>
-                        </div>
-                        <div class="days d-grid justify-content-center mb-3">
-                          <span>Mon</span>
-                          <span>Tue</span>
-                          <span>Wed</span>
-                          <span>Thu</span>
-                          <span>Fri</span>
-                          <span>Sat</span>
-                          <span>Sun</span>
-                        </div>
-                        <div class="dates d-grid justify-content-center">
-                            <button>
-                              <time>1</time>
-                            </button>
-                            <button>
-                              <time>2</time>
-                            </button>
-                            <button class="today">
-                              <time>3</time>
-                            </button>
-                            <button>
-                              <time>4</time>
-                            </button>
-                            <button>
-                              <time>5</time>
-                            </button>
-                            <button>
-                              <time>6</time>
-                            </button>
-                            <button>
-                              <time>7</time>
-                            </button>
-                            <button>
-                              <time>8</time>
-                            </button>
-                            <button>
-                              <time>9</time>
-                            </button>
-                            <button>
-                              <time>10</time>
-                            </button>
-                            <button>
-                              <time>11</time>
-                            </button>
-                            <button>
-                              <time>12</time>
-                            </button>
-                            <button>
-                              <time>13</time>
-                            </button>
-                            <button>
-                              <time>14</time>
-                            </button>
-                            <button>
-                              <time>15</time>
-                            </button>
-                            <button>
-                              <time>16</time>
-                            </button>
-                            <button>
-                              <time>17</time>
-                            </button>
-                            <button>
-                              <time>18</time>
-                            </button>
-                            <button>
-                              <time>19</time>
-                            </button>
-                            <button>
-                              <time>20</time>
-                            </button>
-                            <button>
-                              <time>21</time>
-                            </button>
-                            <button>
-                              <time>22</time>
-                            </button>
-                            <button>
-                              <time>23</time>
-                            </button>
-                            <button>
-                              <time>24</time>
-                            </button>
-                            <button>
-                              <time>25</time>
-                            </button>
-                            <button>
-                              <time>26</time>
-                            </button>
-                            <button>
-                              <time>27</time>
-                            </button>
-                            <button>
-                              <time>28</time>
-                            </button>
-                            <button>
-                              <time>29</time>
-                            </button>
-                            <button>
-                              <time>30</time>
-                            </button>
-                            <button>
-                              <time>31</time>
-                            </button>
-                        </div>
-                      </div>
-
-                  </div>
                 </div>
             </div>
         </div>
@@ -404,6 +301,5 @@
             <p class="text-center">© 2022 PetSocial</p>
         </div>
       </footer>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
