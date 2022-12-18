@@ -13,6 +13,12 @@ export function postTemplatePosts(postData) {
         post.append(img)
       }
 
+    const author = document.createElement("p");
+    author.classList.add("text-center")
+    author.innerHTML = `Author: ${postData.author.name} <br>
+    <img src="${postData.author.avatar}" width="50" height="60">`;
+    post.append(author);
+
       const profileName = JSON.parse(window.localStorage.getItem('profile'))
 
       if (profileName.name === postData.author.name) {
@@ -20,8 +26,7 @@ export function postTemplatePosts(postData) {
         // btn.classList.add("btn", "btn-primary", "btn-sm")
         btn.innerHTML =`<a href="edit_post.html?id=${postData.id}" class="text-muted">Edit my Post</a>`;
         post.append(btn);;
-    } else {
-    }
+    } 
 
     return post;
 }
