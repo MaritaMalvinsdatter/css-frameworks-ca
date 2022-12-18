@@ -3,7 +3,7 @@
 export function postTemplatePosts(postData) {
     const post = document.createElement("div");
     post.classList.add("mainpost", "container-fluid", "d-flex", "flex-column", "border", "border-primary", "my-5");
-    post.innerHTML = `<a href="post.html?id=${postData.id} class="text-decoration-none"><h2 class="text-muted text-center">${postData.title}</h2></a>`;
+    post.innerHTML = `<a href="post.html?id=${postData.id}" class="text-decoration-none"><h2 class="text-muted text-center">${postData.title}</h2></a>`;
 
     if (postData.media) {
         const img = document.createElement("img");

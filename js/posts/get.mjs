@@ -6,7 +6,7 @@ import * as templates from "/js/templates/templateIndex.mjs";
 const action = "/posts";
 
 
-// gets single post, id needed
+// gets single post
 export async function getPost() {
 
     const queryString = document.location.search;
