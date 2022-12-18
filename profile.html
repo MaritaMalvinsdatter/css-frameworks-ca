@@ -238,6 +238,7 @@
                     <div class="heading text-center my-3">
                         <h1 class="fs-2">My Feed:</h1>
                     </div>
+                    <!-- SEARCH & FILTER -->
                     <div class="input-group">
                         <div class="form-outline">
                           <input id="search-input" type="search" id="form1" class="form-control" />
@@ -246,7 +247,25 @@
                         <button id="search-button" type="button" class="btn btn-primary">
                           <i class="fas fa-search"></i>
                         </button>
+                    </div>
+                    <div class="filter-dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          <p>Filter by</p>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <button id="postOldNew" class="dropdown-item" type="button">
+                              <p>Oldest to newest</p>
+                            </button>
+                          </li>
+                          <li>
+                            <button id="postImages" class="dropdown-item" type="button">
+                              <p>Posts with images</p> 
+                            </button>
+                          </li>
+                        </ul>
                       </div>
+                      <!-- SEARCH & FILTER DONE -->
                     <!-- POST FEED -->
                     <div id="news-feed">
                         <!-- <div class="card border border-danger mb-3";">
