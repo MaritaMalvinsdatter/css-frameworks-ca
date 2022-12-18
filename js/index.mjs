@@ -10,9 +10,10 @@ if (path === '/index.html') {
 } else if (path === '/profile.html') {
     handlers.setCreatePostListener()
     postMethods.getMutiplePosts()
-} else if (path === '/edit_post.html') {
-    handlers.setEditPostListener()
-    postMethods.setRemovePostListener()
-} else if (path === '/post.html') {
+    // handlers.filterPostsListener()
+}  else if (path === '/post.html') {
     postMethods.getOnePost()
-} 
+}  else if (path === '/edit_post.html') {
+    handlers.setEditPostListener()
+    handlers.setRemovePostListener()
+}
