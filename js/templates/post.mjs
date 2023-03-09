@@ -1,4 +1,4 @@
-
+import { removePost } from "../posts/remove.mjs";
 
 export function postTemplatePosts(postData) {
     const post = document.createElement("div");
@@ -60,24 +60,36 @@ export function postTemplatePost(postData) {
     // console.log(postData.author.name);
 
     if (profileName.name === postData.author.name) {
-            const btn = document.createElement("button");
-            // btn.classList.add("btn", "btn-primary", "btn-sm")
-            btn.innerHTML =`<a href="edit_post.html?id=${postData.id}" class="text-muted">Edit</a>`;
-            post.append(btn);
-            
-            // const deleteBtn = document.createElement("button");
-            // deleteBtn.classList.add("deletebtn");
-            // const removeButton = document.querySelector("deleteBtn");
-	        // removeButton.addEventListener("click", async () => {
-            // await removePost(postData.id)
-            // })
-
-        } else {
-            const btn = document.createElement("button");
-            btn.classList.add("btn")
-            btn.innerHTML =`<a href="profile.html">Back to Posts</a>`;
-            post.append(btn);;
-        }
+        const btnDiv = document.createElement("div");
+        btnDiv.classList.add("mt-3")
+        const deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("deleteBtn", "me-2", "p-2");
+        deleteBtn.innerText = "Delete";
+        post.append(deleteBtn); 
+        deleteBtn.addEventListener("click", async () => {
+          const confirmed = confirm("Are you sure you want to delete this listing?");
+          if (confirmed) {
+            try {
+              await removePost(postData.id);
+              window.location.assign("/profile.html");
+            } catch (error) {
+              console.error(error);
+              // Handle error, e.g. display error message to user
+            }
+          }
+        });
+    
+        const editBtn = document.createElement("button");
+        editBtn.classList.add("editBtnGr", "p-2");
+        editBtn.setAttribute("data-bs-toggle", "modal")
+        editBtn.setAttribute("data-bs-target", "#editListingModal")
+        editBtn.setAttribute("id", "myInput")
+        editBtn.innerText = "Edit Listing";
+    
+        btnDiv.appendChild(deleteBtn);
+        btnDiv.appendChild(editBtn)
+        post.append(btnDiv);
+    }
 
     return post;
 }
