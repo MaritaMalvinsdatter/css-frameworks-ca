@@ -239,20 +239,24 @@
                         <h1 class="fs-2">My Feed:</h1>
                     </div>
                     <!-- SEARCH & FILTER -->
-                    <div class="input-group">
-                        <div class="form-outline">
-                          <input id="search-input" type="search" id="form1" class="form-control" />
-                          <label class="form-label" for="form1">Search</label>
-                        </div>
-                        <button id="search-button" type="button" class="btn btn-primary">
-                          <i class="fas fa-search"></i>
-                        </button>
+                    <!-- SEARCH -->
+                    <div class="mt-5 d-flex justify-content-center">
+                        <form class="d-flex" role="search">
+                            <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search listings" />
+                            <label class="form-label" for="form1"></label>
+                            <button id="search-button" class="btn search-button" type="button">Search</button>
+                        </form>
                     </div>
                     <div class="filter-dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                           <p>Filter by</p>
                         </button>
                         <ul class="dropdown-menu">
+                            <li>
+                                <button id="postNew" class="dropdown-item" type="button">
+                                  <p>Newest</p>
+                                </button>
+                              </li>
                           <li>
                             <button id="postOldNew" class="dropdown-item" type="button">
                               <p>Oldest to newest</p>
