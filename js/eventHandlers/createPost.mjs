@@ -12,8 +12,6 @@ export function setCreatePostListener() {
 
 			post.tags = post.tags.split(",");
 
-			console.log("post", post);
-
 			// Send to API
 			createPost(post);
 			form.reset();
