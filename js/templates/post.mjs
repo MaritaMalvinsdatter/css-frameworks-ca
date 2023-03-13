@@ -56,9 +56,6 @@ export function postTemplatePost(postData) {
 
     const profileName = JSON.parse(window.localStorage.getItem('profile'))
 
-    // console.log(profileName.name);
-    // console.log(postData.author.name);
-
     if (profileName.name === postData.author.name) {
         const btnDiv = document.createElement("div");
         btnDiv.classList.add("mt-3")
@@ -74,17 +71,13 @@ export function postTemplatePost(postData) {
               window.location.assign("/profile.html");
             } catch (error) {
               console.error(error);
-              // Handle error, e.g. display error message to user
             }
           }
         });
     
         const editBtn = document.createElement("button");
-        editBtn.classList.add("editBtnGr", "p-2");
-        editBtn.setAttribute("data-bs-toggle", "modal")
-        editBtn.setAttribute("data-bs-target", "#editListingModal")
-        editBtn.setAttribute("id", "myInput")
-        editBtn.innerText = "Edit Listing";
+        editBtn.classList.add("btn", "me-2", "p-2")
+        editBtn.innerHTML =`<a href="edit_post.html?id=${postData.id}" class="text-muted">Edit</a>`;
     
         btnDiv.appendChild(deleteBtn);
         btnDiv.appendChild(editBtn)
