@@ -12,7 +12,7 @@ if (path === '/index.html') {
     handlers.setCreatePostListener();
     postMethods.getMultiplePosts();
     postMethods.searchposts();
-    filterPostsListener()
+    filterPostsListener();
 }  else if (path === '/post.html') {
     postMethods.getOnePost();
 }  else if (path === '/edit_post.html') {
