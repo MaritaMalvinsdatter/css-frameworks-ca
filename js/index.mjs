@@ -16,7 +16,6 @@ if (path === '/index.html') {
     filterPostsListener();
 }  else if (path === '/post.html') {
     postMethods.getOnePost();
-    postMethods.removePost();
 }  else if (path === '/edit_post.html') {
     handlers.setEditPostListener();
 }
