@@ -12,10 +12,11 @@ if (path === '/index.html') {
     handlers.setCreatePostListener();
     postMethods.getMultiplePosts();
     postMethods.searchposts();
+    handlers.setProfilePage();
     filterPostsListener();
 }  else if (path === '/post.html') {
     postMethods.getOnePost();
+    postMethods.removePost();
 }  else if (path === '/edit_post.html') {
     handlers.setEditPostListener();
-    handlers.setRemovePost();
 }
