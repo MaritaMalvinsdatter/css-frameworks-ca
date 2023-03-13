@@ -6,13 +6,17 @@ import * as templates from "/js/templates/templateIndex.mjs";
 const action = "/posts";
 let posts = [];
 
-// gets single post
+/**
+Retrieves a single post from the API based on the provided ID.
+@async
+@function getPost
+@returns {Promise<Object>} The post object retrieved from the API.
+*/
 export async function getPost() {
 
     const queryString = document.location.search;
     const params = new URLSearchParams(queryString);
     const id = params.get("id");
-    console.log(id);
 
     if (!id) {
         console.error("postID needed to get post");
@@ -21,8 +25,6 @@ export async function getPost() {
     const response = await tokenFetch(getPostURL)
     const post = await response.json();
 
-    console.log(getPostURL);
-
     return post;
 }
 
@@ -30,7 +32,6 @@ export async function getOnePost() {
     const post = await getPost()
     const container = document.querySelector("#post");
     templates.renderPost(post, container)
-    console.log(post);
 }
 
 // gets multiple posts
