@@ -47,7 +47,6 @@ export async function getPosts() {
       posts = await getPosts();
       const container = document.querySelector("#news-feed");
       templates.renderPosts(posts, container);
-      console.log(posts);
     } catch (error) {
       console.log(error);
     }
@@ -63,7 +62,6 @@ export function searchposts() {
     const filteredPostsBySeller = posts.filter(post => post.author.name.toLowerCase().includes(searchQuery));
 
     const filteredPosts = [...filteredPostsByTitle, ...filteredPostsBySeller];
-    console.log(filteredPosts)
 
     const container = document.querySelector("#news-feed");
     container.innerHTML = "";
