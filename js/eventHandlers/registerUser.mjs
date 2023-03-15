@@ -1,5 +1,10 @@
 import { register } from "/js/auth/register.mjs";
 
+/**
+Sets a listener for the registration form and sends its data to the API when submitted.
+@function setRegisterFormListener
+*/
+
 export function setRegisterFormListener() {
     const form = document.querySelector("#registerForm");
     if (form) {

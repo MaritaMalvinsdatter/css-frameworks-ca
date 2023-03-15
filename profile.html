@@ -40,47 +40,23 @@
           </nav>
     </header>
     <main>
-        <section class="section about-section gray-bg" id="about">
-            <div class="container mt-4">
-                <div class="row align-items-center justify-content-center flex-row-reverse">
-                    <div class="col-lg-4 d-flex flex-column p-3">
-                        <div class="about-avatar d-flex justify-content-center flex-column">
-                            <img src="/img/pexels-erik-mclean-4061391.jpg" class="img-thumbnail" alt="">
-                        </div>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-primary btn-sm mt-3">Message</button>
-                        </div>
+        <section class="w-100 px-4 py-5 gradient-custom-2 rounded">
+            <div class="row d-flex justify-content-center">
+              <div class="col col-lg-9 col-xl-8">
+                <div class="card mx-5 shadow-sm">
+                  <div class="rounded-top text-white d-flex flex-column flex-md-row align-items-center" id="profile-banner" style="background-image: url('')">
+                    <div class="ms-md-4 mt-md-5 d-flex flex-column" style="width: 150px; z-index: 1;">
+                      <img id="profile-avatar" src="" alt="Profile Avatar" class="img-fluid img-thumbnail mt-4 mb-2" style="width: 150px;">
                     </div>
-                    <div class="col-lg-6">
-                        <div class="about-text go-to">
-                            <h1 class="dark-color fs-2">Stitch aka Stitchy</h1>
-                            <h6 class="theme-color lead">A happy frenchie living in sunny LA</h6>
-                            <p>Love long walks on the beach, though not much fan of the water unless it's super hot outside! My best friend is Lucky who is also a french bulldog.</p>
-                            <p>I would love to get some more friends in the Venice Beach are to hang out with. Doesn't matter what breed you are as long as you love to play chase. 
-                                Send me a message and we can meet up!</p>
-                            <div class="row about-list">
-                                <div class="col-md-6">
-                                    <div class="media">
-                                        <p>Age: 4 Yrs</p>
-                                    </div>
-                                    <div class="media">
-                                        <p>Home: LA, California</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="media">
-                                        <p>Favourite Treat: Watermelon</p>
-                                    </div>
-                                    <div class="media">
-                                        <p>Instagram: @stitch_the_frenchie</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="ms-md-3 text-dark d-flex flex-column justify-content-center" style="flex-grow: 1; background-color: white;">
+                        <h5 id="profile-name"></h5>
+                        <p id="profile-email" class="mb-1"></p>
+                      </div>                      
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </section>
         <hr>
         <div class="container mt-5 container-fluid">
             <div class="row gx-5">
@@ -239,20 +215,24 @@
                         <h1 class="fs-2">My Feed:</h1>
                     </div>
                     <!-- SEARCH & FILTER -->
-                    <div class="input-group">
-                        <div class="form-outline">
-                          <input id="search-input" type="search" id="form1" class="form-control" />
-                          <label class="form-label" for="form1">Search</label>
-                        </div>
-                        <button id="search-button" type="button" class="btn btn-primary">
-                          <i class="fas fa-search"></i>
-                        </button>
+                    <!-- SEARCH -->
+                    <div class="mt-5 d-flex justify-content-center">
+                        <form class="d-flex" role="search">
+                            <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search listings" />
+                            <label class="form-label" for="form1"></label>
+                            <button id="search-button" class="btn search-button" type="button">Search</button>
+                        </form>
                     </div>
                     <div class="filter-dropdown">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                           <p>Filter by</p>
                         </button>
                         <ul class="dropdown-menu">
+                            <li>
+                                <button id="postNew" class="dropdown-item" type="button">
+                                  <p>Newest</p>
+                                </button>
+                              </li>
                           <li>
                             <button id="postOldNew" class="dropdown-item" type="button">
                               <p>Oldest to newest</p>
